@@ -8,7 +8,7 @@ greet:
     echo "Hello, Barış!"
 
 nrepl:
-    clojure -M:nREPL -m nrepl.cmdline
+    clojure -M:dev -m nrepl.cmdline
 
 format_check:
     clojure -M:format -m cljfmt.main check src dev

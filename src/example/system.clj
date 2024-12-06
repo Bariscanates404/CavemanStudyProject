@@ -21,7 +21,8 @@
                      {:dbtype   "postgres"
                       :dbname   "postgres"
                       :username "postgres"
-                      :password "postgres"}))
+                      :password "postgres"
+                      :port "5632"}))
 
 (defn stop-db
   [db]
