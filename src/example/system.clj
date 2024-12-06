@@ -2,7 +2,7 @@
   (:require [example.routes :as routes]
             [next.jdbc.connection :as connection]
             [ring.adapter.jetty :as jetty])
-  (:import (com.zaxxer.hikari HikariDataSource)             ;; problem 1
+  (:import (com.zaxxer.hikari HikariDataSource)
            (org.eclipse.jetty.server Server)))
 
 
@@ -17,7 +17,7 @@
 
 (defn start-db
   []
-  (connection/->pool HikariDataSource                       ;; problem 2
+  (connection/->pool HikariDataSource
                      {:dbtype   "postgres"
                       :dbname   "postgres"
                       :username "postgres"
@@ -26,7 +26,7 @@
 
 (defn stop-db
   [db]
-  (HikariDataSource/.close db))                             ;; problem 3
+  (HikariDataSource/.close db))
 
 (defn stop-server
   [server]
